@@ -1,0 +1,46 @@
+{
+  "name": "project_manager",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js",
+    "test": "mocha tests/*.spec.js --color",
+    "lint": "eslint src/* --color",
+    "client-install": "npm install --prefix ./client",
+    "server": "nodemon src/index.js",
+    "client": "npm start --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ./client && npm run build --prefix ./client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avitalmah/CICD_Class.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avitalmah/CICD_Class/issues"
+  },
+  "homepage": "https://github.com/avitalmah/CICD_Class#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "mongoose": "^6.2.6",
+    "nodemailer": "^6.7.4"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.11.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.29.3",
+    "mocha": "^9.2.2",
+    "nodemon": "^2.0.15"
+  }
+}
